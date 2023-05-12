@@ -1,3 +1,73 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>First Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">First Content</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Second Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Second Content</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Third Accordion</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-content>
+</ion-menu>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="login">
+      <ion-icon name="play-circle"></ion-icon>
+      Login
+    </ion-tab-button>
+    <ion-tab-button tab="abc">
+      <ion-icon name="home-outline"></ion-icon>
+      Public Content
+    </ion-tab-button>
+    <ion-tab-button tab="abcd">
+      <ion-icon name="planet-outline"></ion-icon>
+      Publics Content
+    </ion-tab-button>
+
+    <ion-menu-toggle>
+      <ion-tab-button>
+        <ion-icon name="apps-outline"></ion-icon>
+        Menu
+      </ion-tab-button>
+    </ion-menu-toggle>
+
+    <ion-tab-button tab="abcd">
+      <ion-icon name="planet-outline"></ion-icon>
+      Publics Content2
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+<!--
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+-->
