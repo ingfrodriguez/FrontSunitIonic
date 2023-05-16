@@ -1,74 +1,12 @@
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{ content }}</ion-title>
+      <ion-title>Home</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    <ion-menu-toggle>
-      <ion-button>Click to open the menu</ion-button>
-    </ion-menu-toggle>
-    <div ngbAccordion>
-      <div ngbAccordionItem>
-        <h2 ngbAccordionHeader>
-          <button ngbAccordionButton>First</button>
-        </h2>
-        <div ngbAccordionCollapse>
-          <div ngbAccordionBody>
-            <ng-template>Content for the first item</ng-template>
-          </div>
-        </div>
-      </div>
-    </div>
 
-
-    <p>You can easily control dropdowns programmatically using the exported dropdown instance.</p>
-
-<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-	<button
-		type="button"
-		class="btn btn-outline-primary me-2"
-		id="dropdownManual"
-		ngbDropdownAnchor
-		(focus)="myDrop.open()"
-	>
-		Toggle dropdown
-	</button>
-	<div ngbDropdownMenu aria-labelledby="dropdownManual">
-		<button ngbDropdownItem>Action - 1</button>
-		<button ngbDropdownItem>Another Action</button>
-		<button ngbDropdownItem>Something else is here</button>
-	</div>
-</div>
-
-<button type="button" class="btn btn-outline-success me-2" (click)="$event.stopPropagation(); myDrop.open();">
-	Open from outside
-</button>
-<button type="button" class="btn btn-outline-danger me-2" (click)="$event.stopPropagation(); myDrop.close();">
-	Close from outside
-</button>
-
-
-
-
-
-
-
-<div ngbDropdown class="d-inline-block">
-  <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-    Toggle dropdown
-  </button>
-  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-    <button ngbDropdownItem>Action - 1</button>
-    <button ngbDropdownItem>Another Action</button>
-    <button ngbDropdownItem>Something else is here</button>
-  </div>
-</div>
-
-
-
-
-
+Home
 
 
 
