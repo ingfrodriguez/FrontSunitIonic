@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { GlobalVariable } from 'src/app/_services/global';
 
-const API_URL = 'http://192.168.1.13:8080/api/test/';
+
 
 
 @Injectable({
@@ -13,18 +14,18 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + 'all', { responseType: 'text' });
+    return this.http.get(GlobalVariable.AUTH_API + 'test/all', { responseType: 'text' });
   }
 
   getUserBoard(): Observable<any> {
-    return this.http.get(API_URL + 'user', { responseType: 'text' });
+    return this.http.get(GlobalVariable.AUTH_API + 'test/ser', { responseType: 'text' });
   }
 
   getModeratorBoard(): Observable<any> {
-    return this.http.get(API_URL + 'mod', { responseType: 'text' });
+    return this.http.get(GlobalVariable.AUTH_API + 'test/mod', { responseType: 'text' });
   }
 
   getAdminBoard(): Observable<any> {
-    return this.http.get(API_URL + 'admin', { responseType: 'text' });
+    return this.http.get(GlobalVariable.AUTH_API + 'test/admin', { responseType: 'text' });
   }
 }

@@ -19,6 +19,8 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ListarCategoriasComponent } from './categorias/listar/listar-categorias.component';
+import { CrearCategoriaComponent } from './categorias/crear-categoria/crear-categoria.component';
+import { HeaderComponent } from './componentes/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -31,7 +33,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    ListarCategoriasComponent
+    ListarCategoriasComponent,
+    CrearCategoriaComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

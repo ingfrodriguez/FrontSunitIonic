@@ -1,4 +1,9 @@
+import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
+
 
 @Component({
   selector: 'app-crear-categoria',
@@ -7,8 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearCategoriaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {}
 
+  getCategorias():any{
+
+  }
 }

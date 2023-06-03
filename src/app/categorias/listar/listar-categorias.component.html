@@ -1,29 +1,25 @@
 <div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar color="light">
-
-      <ion-buttons slot="start">
-        <ion-button>
-          <ion-icon name="folder-open-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-
-      <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon name="person-circle"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-
-
-
-      <ion-title>Listar Categorias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-header
+    titulo="Listar Categorias"
+    icono="folder-open-outline"
+  ></app-header>
   <ion-content class="ion-padding">
 
 
 
-
-
+    <table class="table  table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of categorias">
+          <td>{{categoria.Codigo}}</td>
+          <td>{{categoria.Nombre}}</td>
+        </tr>
+      </tbody>
+    </table>
   </ion-content>
 </div>

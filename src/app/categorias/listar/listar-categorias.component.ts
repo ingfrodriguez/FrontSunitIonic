@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../_services/user.service';
+import { CategoriasService } from '../../_services/categorias.service';
+import { CategoriaProveedor } from '../../models/categoria-proveedor';
 
 @Component({
   selector: 'app-listar',
@@ -7,9 +8,28 @@ import { UserService } from '../../_services/user.service';
   styleUrls: ['./listar-categorias.component.css'],
 })
 export class ListarCategoriasComponent implements OnInit {
+  errorMessage = '';
+  categorias:CategoriaProveedor[]=[{
+    Nombre:'',
+    Codigo:''
+  }];
 
-  constructor() { }
+  constructor(private categoriaService: CategoriasService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.listar()
+  }
+
+  listar(): void {
+    this.categoriaService.listar().subscribe({
+      next: data => {
+        this.categorias=data
+      },
+      error: err => {
+        this.errorMessage = err.message;
+      }
+    });
+  }
+
 
 }

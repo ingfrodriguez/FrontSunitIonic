@@ -9,6 +9,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { ListarCategoriasComponent } from './categorias/listar/listar-categorias.component';
+import { CrearCategoriaComponent } from './categorias/crear-categoria/crear-categoria.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   //CATEGORIAS
   { path: 'categorias/listar', component: ListarCategoriasComponent,canActivate:[AuthGuard] },
+  { path: 'categorias/crear', component: CrearCategoriaComponent,canActivate:[AuthGuard] },
   { path: '**', component: HomeComponent },
   { path: '', component: HomeComponent }
   /*,
