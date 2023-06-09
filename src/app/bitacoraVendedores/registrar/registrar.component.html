@@ -1,0 +1,51 @@
+<div class="ion-page" id="main-content">
+  <app-header
+    titulo="Reg Pruebas"
+    icono="man-outline"
+  ></app-header>
+  <ion-content class="ion-padding">
+
+
+    
+
+    
+    <div class="card card-container">      
+      <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="codigo">Co</label>
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Fruit" interface="action-sheet" placeholder="Select fruit"  name="codigo" [(ngModel)]="form.codigo" required
+              #codigo="ngModel" >
+                <ion-select-option value="apples">Apples</ion-select-option>
+                <ion-select-option value="oranges">Oranges</ion-select-option>
+                <ion-select-option value="bananas">Bananas</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>          
+          <div class="alert alert-danger" role="alert" *ngIf="f.submitted && codigo.invalid">
+            Co es requerido!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Emp</label>
+          <input type="text" class="form-control" name="empresa" [(ngModel)]="form.empresa" required
+            #empresa="ngModel" />
+          <div class="alert alert-danger" role="alert" *ngIf="f.submitted && empresa.invalid">
+            Emp es requerido!
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">
+            Reg
+          </button>
+        </div>
+        <div class="form-group">
+          <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+            Fallo registro: {{ errorMessage }}
+          </div>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</div>

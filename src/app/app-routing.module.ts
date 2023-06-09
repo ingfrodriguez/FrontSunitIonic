@@ -10,6 +10,7 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { ListarCategoriasComponent } from './categorias/listar/listar-categorias.component';
 import { CrearCategoriaComponent } from './categorias/crear-categoria/crear-categoria.component';
+import { RegistrarComponent } from './bitacoraVendedores/registrar/registrar.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   //CATEGORIAS
   { path: 'categorias/listar', component: ListarCategoriasComponent,canActivate:[AuthGuard] },
   { path: 'categorias/crear', component: CrearCategoriaComponent,canActivate:[AuthGuard] },
+  { path: 'bitacoravendedores/registrar', component: RegistrarComponent },
   { path: '**', component: HomeComponent },
   { path: '', component: HomeComponent }
   /*,

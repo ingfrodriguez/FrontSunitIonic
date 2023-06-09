@@ -20,6 +20,7 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ListarCategoriasComponent } from './categorias/listar/listar-categorias.component';
 import { CrearCategoriaComponent } from './categorias/crear-categoria/crear-categoria.component';
+import { RegistrarComponent } from './bitacoraVendedores/registrar/registrar.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -35,7 +36,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BoardUserComponent,
     ListarCategoriasComponent,
     CrearCategoriaComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
