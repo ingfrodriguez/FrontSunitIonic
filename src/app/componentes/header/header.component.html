@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar color="light">
+  <ion-toolbar color="primary">
 
     <ion-buttons slot="start">
       <ion-button>
         <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+
+    <ion-buttons slot="end"  *ngFor="let menu of MenusExtras">
+      <ion-button href= "{{menu.link}}" ngbTooltip="{{menu.tooltip}}" placement="left">
+        <ion-icon name="{{menu.icono}}"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+    <ion-buttons slot="end" (click)="exportexcel()" ngbTooltip="Imprimir"  *ngIf="print">
+      <ion-button>
+        <ion-icon name="print-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
 
@@ -12,6 +27,7 @@
         <ion-icon name="person-circle"></ion-icon>
       </ion-button>
     </ion-buttons>
+
 
 
 

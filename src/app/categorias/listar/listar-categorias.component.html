@@ -1,25 +1,26 @@
 <div class="ion-page" id="main-content">
   <app-header
-    titulo="Listar Categorias"
+    titulo="Listar Categorias Productos"
     icono="folder-open-outline"
-  ></app-header>
-  <ion-content class="ion-padding">
-
-
-
-    <table class="table  table-hover">
+    [print]="true"
+    [MenusExtras]= menuTS
+    >
+  </app-header>
+  <ion-content class="ion-padding" *ngIf="BanderaSeguridad">
+    <table class="table  table-hover" id="excel-table">
       <thead>
         <tr>
-          <th scope="col">Código</th>
           <th scope="col">Nombre</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let categoria of categorias">
-          <td>{{categoria.Codigo}}</td>
           <td>{{categoria.Nombre}}</td>
         </tr>
       </tbody>
     </table>
+  </ion-content>
+  <ion-content class="ion-padding" *ngIf="!BanderaSeguridad">
+    <div class="p-3 mb-2 bg-danger text-white">{{content}}</div>
   </ion-content>
 </div>
